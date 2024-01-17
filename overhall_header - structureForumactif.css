@@ -1,0 +1,57 @@
+/****** ----------------------------------------------------------
+ ****** STRUCTURE DE FORUMACTIF ---------------------------------- 
+ ****** Elements de base qui servent à construire la page --------
+ ****** Il y a peu de chances que vous deviez toucher cette partie du CSS ******/
+ 
+/*** ------------------------------- ***/
+/* BALISES GENERALES --------------- ***/
+
+ul {list-style-type: none;padding: 0;margin: 0;}
+fieldset {border: none;padding: 0;margin: 0;}
+dl {display: grid;grid-template-columns: 220px auto;grid-gap: 15px}
+dd {margin: 0;}
+dt {margin: 0}
+dt label {font-weight: bold}
+button, input {border: none}
+button, select, input{font-family: var(--font);cursor: pointer;}
+input:is([type="text"], [type="passeword"]){cursor: text;}
+
+/*** ----------------------------- ***/
+/*** STRUCTURE DE LA TOOLBAR ----- ***/ 
+ *** Il est conseillé de ne rien modifier pour un bon fonctionnement de la toolbar ***/
+#fa_right #fa_menu ul,
+#fa_right.notification #fa_menu ul,
+#fa_right #fa_notifications #notif_unread {display: none}
+#notif_list hr {display: none}
+#fa_toolbar #live_notif .fa_notification .content {display: inline-block;}
+#fa_right.welcome #fa_menulist {display: block;}
+#fa_right.notification #notif_list {display: flex;}
+#fa_toolbar #fa_right #fa_notifications.unread #notif_unread {display: inline;}
+#fa_usermenu table {width: 100%;}
+#fa_usermenu table tr {display: flex;justify-content: center;}
+.fa_fix {position: fixed !important; z-index: 999;;top: 0; right: 0;}
+
+/*** --------------------------------- ***/
+/*** STRUCTURE DE LA PAGE DE CONNEXION ***/
+.fld_connexion dl {display: grid;rid-row-gap: 15px; grid-template-columns: 150px auto;}
+.fld_connexion dl:nth-of-type(2) dd:last-of-type {grid-column: 1 / span 2;}
+.fld_connexion dl:nth-of-type(3) {margin: 0;}
+.fld_connexion dl:nth-of-type(n+3) {display: block;}
+.invisible {display: none;visibility: hidden;} .visible {display: block;visibility: visible;}
+
+/* Indicateur complexité du mot de passe */
+#cont_pwd {display: flex;align-items: center;height: 100%;margin-left: 5px;}
+.pwd_img { padding: 2px 6px;display: none;border-radius: 3px;}
+#pwd_good {background-color: #4CAF50;color: #FFF;}
+#pwd_middle {background-color: #FFCC00;color: #000;}
+#pwd_bad {background-color: #F04040;color: #FFF;}
+
+/*** ------------------------------- ***/
+/*** POUBELLE DE FORUMACTIF -------- ***/
+#find_username br,#users_here br, #main-content > p, .adminlink br, .corners-top, .corners-bottom { display: none;}
+#find_username .panel {border: none;margin: 0}
+.adminlink { clear: both}
+#cp-main#cp-main#cp-main, table, .quickreply div#textarea_content {width: 100% !important;}
+.panel .panel { background: transparent;border: none; padding: 0;margin: 0; border-radius: 0;}
+.social_btn {display: none;}
+  
