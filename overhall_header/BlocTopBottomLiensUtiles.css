@@ -3,7 +3,7 @@ TOP ET BOTTOM
 *****************/  
 .blocTopBottom {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 15px;
     display: flex;
     flex-direction: column;
